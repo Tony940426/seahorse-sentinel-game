@@ -253,7 +253,7 @@ window.addEventListener('load', function(){
         let message2;
         if (this.game.score > this.game.winningScore){
           message1 = 'You Win!'
-          message2 = 'Well Done!'
+          message2 = 'Please Rebuy The Game Through Wang Game Store'
         } else {
           message1 = 'You Lost!'
           message2 = 'Please Rebuy The Game Through Wang Game Store'
