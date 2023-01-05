@@ -35,6 +35,7 @@ window.addEventListener('load', function(){
           this.height = 3;
           this.speed = 3;
           this.markedForDeletion = false;
+          this.image = document.getElementById('projectile');
       }
 
       update() {
@@ -43,8 +44,7 @@ window.addEventListener('load', function(){
       }
 
       draw(context) {
-          context.fillStyle = 'yellow'
-          context.fillRect(this.x, this.y, this.width, this.height);
+          context.drawImage(this.image, this.x, this.y)
       }
   }
 
@@ -318,7 +318,7 @@ window.addEventListener('load', function(){
           this.ammoInterval = 500;
           this.gameOver = false;
           this.score = 0;
-          this.winningScore = 95;
+          this.winningScore = 100;
           this.gameTime = 0;
           this.timeLimit = 30000;
           this.speed = 1;
