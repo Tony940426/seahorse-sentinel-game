@@ -256,7 +256,7 @@ window.addEventListener('load', function(){
     constructor(game){
       this.game = game;
       this.fontSize = 25;
-      this.fontFamily = 'Helvetica';
+      this.fontFamily = 'Bangers';
       this.color = 'white';
     }
 
@@ -266,7 +266,7 @@ window.addEventListener('load', function(){
       context.shadowOffsetX = 2;
       context.shadowOffsetY = 2;
       context.shadowColor = 'black'
-      context.font = this.fontSize + 'px' + this.fontFamily;
+      context.font = this.fontSize + 'px ' + this.fontFamily;
       //score
       context.fillText('Score: ' + this.game.score, 20, 40)
 
@@ -286,9 +286,9 @@ window.addEventListener('load', function(){
           message1 = 'You Lost!'
           message2 = 'Please Rebuy The Game Through Wang Game Store'
         }
-        context.font = '50px' + this.fontFamily;
+        context.font = '80px ' + this.fontFamily;
         context.fillText(message1, this.game.width * 0.5, this.game.height * 0.5 - 40);
-        context.font = '25px' + this.fontFamily;
+        context.font = '20px ' + this.fontFamily;
         context.fillText(message2, this.game.width * 0.5, this.game.height * 0.5 + 40);
       }
       //ammo
