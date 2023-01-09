@@ -299,11 +299,11 @@ window.addEventListener('load', function(){
         this.height = 227;
         this.y = Math.random() * (this.game.height * 0.95 - this.height);
         this.image = document.getElementById('hivewhale')
-        this.frameY = Math.floor(Math.random() * 2);
+        this.frameY = 0;
         this.lives = 15;
         this.score = 15;
         this.type = 'hive';
-        this.speedX = Math.random() * -1.2 - 0.2
+        this.speedX = Math.random() * -1.2 - 0.2;
       }
     }
 
