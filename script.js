@@ -4,6 +4,11 @@ window.addEventListener('load', function(){
   canvas.width = 1200;
   canvas.height = 500;
 
+  const restart = document.querySelector('#restart');
+  restart.addEventListener('click', (event) => {
+    this.location.reload();
+  })
+
   class InputHandler {
       constructor(game){
           this.game = game;
