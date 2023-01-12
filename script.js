@@ -239,7 +239,10 @@ window.addEventListener('load', function(){
     }
     update(){
       this.x += this.speedX - this.game.speed;
-      if (this.x + this.width < 0 ) this.markedForDeletion = true;
+      if (this.x + this.width < 0 ) {
+        this.markedForDeletion = true;
+        this.game.score - 5;
+      }
       if (this.frameX < this.maxFrame) {
         this.frameX ++;
       } else {
@@ -408,10 +411,10 @@ window.addEventListener('load', function(){
         let message2;
         if (this.game.score > this.game.winningScore){
           message1 = 'You Win!'
-          message2 = 'Please Rebuy The Game Through Wang Game Store'
+          message2 = 'Play Again!'
         } else {
           message1 = 'You Lost!'
-          message2 = 'Please Rebuy The Game Through Wang Game Store'
+          message2 = 'Please Try Again'
         }
         context.font = '80px ' + this.fontFamily;
         context.fillText(message1, this.game.width * 0.5, this.game.height * 0.5 - 40);
